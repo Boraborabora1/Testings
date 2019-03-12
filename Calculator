@@ -1,0 +1,72 @@
+import tkinter
+from tkinter import *
+from tkinter import messagebox
+pencere = Tk()
+pencere.title("Hesap Makinesi")
+pencere.geometry("300x400")
+uygulama = Frame(pencere)
+uygulama.grid()
+etiket = Label(uygulama, Text = "merhaba")
+etiket.grid(padx= 90, pady= 30)
+Label = Label(uygulama, text= "Kullanıcı adınızı girin")
+Label.grid(padx=90, pady=10)
+Entry1 = Entry(uygulama, bd=2)
+Entry1.grid(padx=90, pady=20)
+etiket = Label(uygulama, Text = "merhaba")
+etiket.grid(padx= 90, pady= 30)
+pencere.mainloop()
+kullanici = input("kullanıcı adınızı girin:")
+sifre = input("şifrenizi girin " + kullanici + ":")
+sifre2 = input("şifrenizi tekrar edin " +kullanici + ":")
+key = "dur"
+key1 = "dur"
+rakam = ("5")
+if str(sifre) == str(sifre2):
+    print("Şifre doğru! siteye hoşgeldiniz!")
+    key ="gec"
+else:
+    print("şifrenizi yanlış girdiniz. Lütfen tekrar girin!")
+    while key == "dur":
+        sifre2 = input("şifrenizi tekrar girin:")
+        if str(sifre2) == str(sifre):
+            key = "gec"
+print("Hoşgeldiniz! " + kullanici)
+giris = "" \
+        "1) Toplama İşlemi \n" \
+        "2) Çıkarma İşlemi\n" \
+        "3) ÇArpma İşlemi \n" \
+        "4) Bölme İşlemi "
+print(giris)
+yanit = input("İstediğiniz işlem numarasını giriniz:")
+while key1 == str("dur"):
+    print("Lütfen geçerli bir sayı girin " + kullanici)
+    yanit = str(input("İstediğiniz işlem numarası: "))
+    if yanit < rakam:
+        break
+if yanit == ("1"):
+    sayi1 = input("İlk sayıyı giriniz:")
+    sayi2 = input("İkinci sayıyı giriniz:")
+    sonuc = sayi1 + sayi2
+
+elif yanit == ("2"):
+    sayi1 = input("İlk sayıyı giriniz:")
+    sayi2 = input("İkinci sayıyı giriniz:")
+    sonuc = sayi1 - sayi2
+
+elif yanit == ("3"):
+    sayi1 = input("İlk sayıyı giriniz:")
+    sayi2 = input("İkinci sayıyı giriniz:")
+    sonuc = int(sayi1) * int(sayi2)
+
+elif yanit == ("4"):
+    sayi1 = input("İlk sayıyı giriniz:")
+    sayi2 = input("İkinci sayıyı giriniz:")
+    sonuc = int(sayi1) / int(sayi2)
+
+
+
+
+
+
+
+
